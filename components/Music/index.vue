@@ -3,7 +3,7 @@
         <v-row class="ma-2 pa-2" v-if="currentUser">
             <v-col cols="12">
                 <UserProfile :user="currentUser" />
-            </v-col>
+            </v-col>            
         </v-row>
         <v-row class="ma-2 pa-2" v-if="currentSong">
             <v-col cols="12" >
