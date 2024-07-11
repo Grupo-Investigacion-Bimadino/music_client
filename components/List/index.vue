@@ -2,6 +2,13 @@
   <v-card class="mx-auto" variant="outlined">
     <v-list density="compact">
       <v-list-subheader>Listas de reproducción</v-list-subheader>
+      <v-list>
+        <v-list-item>
+          <ListNew @newList="onNewList" />
+        </v-list-item>
+      </v-list>
+
+      <v-divider></v-divider>
       <v-list-item
         v-model="listSelected"
         v-for="(item, i) in lists"
@@ -28,4 +35,8 @@ const props = defineProps({
     type: Array,
   },
 });
+
+const onNewList = (list) => {
+  console.log("Nueva lista", list);
+};
 </script>
